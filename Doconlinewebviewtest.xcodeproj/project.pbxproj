@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06C03F4ED85A29727C7328AD /* Pods_Doconlinewebviewtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745F2DF6D0367CA9EEBA70CC /* Pods_Doconlinewebviewtest.framework */; };
 		238276252A84D27D00C2A20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238276242A84D27D00C2A20E /* AppDelegate.swift */; };
 		238276272A84D27D00C2A20E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238276262A84D27D00C2A20E /* SceneDelegate.swift */; };
 		238276292A84D27D00C2A20E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238276282A84D27D00C2A20E /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		2382762D2A84D27E00C2A20E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		238276302A84D27E00C2A20E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		238276322A84D27E00C2A20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745F2DF6D0367CA9EEBA70CC /* Pods_Doconlinewebviewtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doconlinewebviewtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B19A422CC4D1394F9DFBB2AB /* Pods-Doconlinewebviewtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doconlinewebviewtest.debug.xcconfig"; path = "Target Support Files/Pods-Doconlinewebviewtest/Pods-Doconlinewebviewtest.debug.xcconfig"; sourceTree = "<group>"; };
+		C741FB0171314F0B2988CC1A /* Pods-Doconlinewebviewtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doconlinewebviewtest.release.xcconfig"; path = "Target Support Files/Pods-Doconlinewebviewtest/Pods-Doconlinewebviewtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C03F4ED85A29727C7328AD /* Pods_Doconlinewebviewtest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				238276232A84D27D00C2A20E /* Doconlinewebviewtest */,
 				238276222A84D27D00C2A20E /* Products */,
+				7E3C8AAB0CABBF513292ED2E /* Pods */,
+				B32EB3460B16E4C199BD0EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Doconlinewebviewtest;
 			sourceTree = "<group>";
 		};
+		7E3C8AAB0CABBF513292ED2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B19A422CC4D1394F9DFBB2AB /* Pods-Doconlinewebviewtest.debug.xcconfig */,
+				C741FB0171314F0B2988CC1A /* Pods-Doconlinewebviewtest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B32EB3460B16E4C199BD0EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				745F2DF6D0367CA9EEBA70CC /* Pods_Doconlinewebviewtest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 238276352A84D27E00C2A20E /* Build configuration list for PBXNativeTarget "Doconlinewebviewtest" */;
 			buildPhases = (
+				06E7913BDDAA967181185594 /* [CP] Check Pods Manifest.lock */,
 				2382761D2A84D27D00C2A20E /* Sources */,
 				2382761E2A84D27D00C2A20E /* Frameworks */,
 				2382761F2A84D27D00C2A20E /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06E7913BDDAA967181185594 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Doconlinewebviewtest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2382761D2A84D27D00C2A20E /* Sources */ = {
@@ -282,6 +332,7 @@
 		};
 		238276362A84D27E00C2A20E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19A422CC4D1394F9DFBB2AB /* Pods-Doconlinewebviewtest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,17 +341,20 @@
 				DEVELOPMENT_TEAM = 3P2MF9UN23;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Doconlinewebviewtest/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "If you want to use the camera, you have to give permission.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "If you want to use the microphone, you have to give permission.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.doconline.doconline.Doconlinewebviewtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iossdk.doconlinesdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -310,6 +364,7 @@
 		};
 		238276372A84D27E00C2A20E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C741FB0171314F0B2988CC1A /* Pods-Doconlinewebviewtest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,17 +373,20 @@
 				DEVELOPMENT_TEAM = 3P2MF9UN23;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Doconlinewebviewtest/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "If you want to use the camera, you have to give permission.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "If you want to use the microphone, you have to give permission.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.doconline.doconline.Doconlinewebviewtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iossdk.doconlinesdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
